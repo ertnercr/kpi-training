@@ -41,19 +41,19 @@ function App() {
     <div className="App" style={{height:"100vh" }}>
       
       <div style={{display:"flex",flexDirection:"column", width:"25%" ,backgroundColor:"#273AB5",height:"100%",}}>
-      <img style={{width:"45%", margin:"0 auto",marginTop:"15px",marginBottom:"15px"}} src={`${logo}`} alt=""/>
+      <img style={{width:"45%", margin:"0 auto",marginTop:"25px",marginBottom:"15px"}} src={`${logo}`} alt=""/>
       
       <div style={{marginLeft:"10%"}}>
-         <div style={{display:"flex",justifyContent:"space-between"}}>
-          <span style={{color:"#e0dede"}}>SÜREÇLER</span> 
-          <Checkbox style={{ color: "#e0dede", fontFamily: "sans-serif",position:"relative",right:"35px" }} checked={checkAll} indeterminate={indeterminate} onChange={handleSelectAll}>Tümünü Seç</Checkbox>
+         <div style={{display:"flex",justifyContent:"space-between",marginTop:"20px",marginBottom:"25px"}}>
+          <span style={{color:"#F3F4FB",fontFamily:"Montserrat,sans-serif"}}>SÜREÇLER</span> 
+          <Checkbox style={{ color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",position:"relative",right:"35px" }} checked={checkAll} indeterminate={indeterminate} onChange={handleSelectAll}>Tümünü Seç</Checkbox>
           </div>
 
        <Space style={{marginLeft:"2%"}} direction="vertical">
        <Checkbox
         checked={checkboxStates.Arge}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Arge"
         id="Arge"
       >
@@ -63,7 +63,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Bakim}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Bakım"
         id="Bakim"
       >
@@ -73,7 +73,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Bilgi_Teknolojileri}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Bilgi Teknolojileri"
         id="Bilgi_Teknolojileri"
       >
@@ -83,7 +83,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Finans}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Finans"
         id="Finans"
       >
@@ -93,7 +93,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Cevre}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB",fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Çevre"
         id="Cevre"
       >
@@ -103,7 +103,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Insan_Kaynaklari}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="İnsan Kaynakları"
         id="Insan_Kaynaklari"
       >
@@ -113,7 +113,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Is_Sagligi}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB",fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="İş Sağlığı ve Güvenliği"
         id="Is_Sagligi"
       >
@@ -123,7 +123,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Kalite}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Kalite"
         id="Kalite"
       >
@@ -133,7 +133,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Satis}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Satış ve Pazarlama"
         id="Satis"
       >
@@ -143,7 +143,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Tedarik}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Tedarik Zinciri"
         id="Tedarik"
       >
@@ -153,7 +153,7 @@ function App() {
       <Checkbox
         checked={checkboxStates.Uretim}
         onChange={handleCheckboxChange}
-        style={{ marginTop: "7px", marginLeft: "4px", color: "#e0dede", fontFamily: "sans-serif" }}
+        style={{ marginTop: "14px", marginLeft: "4px", color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",fontSize:"16px" }}
         name="Üretim"
         id="Uretim"
       >
