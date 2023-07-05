@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {Space, Checkbox} from "antd"
-
 import {logo} from "./image.js"
 
 function App() {
   const [checkAll,setCheckAll]=useState(false)
-  const [indeterminate,setIndeterminate]=useState(false)
   const [checkboxStates, setCheckboxStates] = useState({
     Arge: false,
     Bakim: false,
@@ -19,23 +17,27 @@ function App() {
     Tedarik: false,
     Uretim: false
   });
+
+  useEffect(() => {
+    const trueKeys = Object.keys(checkboxStates).filter(key => checkboxStates[key] === true);
+    console.log("Seçili Olanlar:",trueKeys)
+  }, [checkboxStates])
+  
   const handleSelectAll = (e) => {
     const { checked } = e.target;
     const updatedCheckboxStates = {};
-  
     Object.keys(checkboxStates).forEach((key) => {
       updatedCheckboxStates[key] = checked;
     });
-  
     setCheckAll(checked);
-    setIndeterminate(false);
     setCheckboxStates(updatedCheckboxStates);
   };
 
   const handleCheckboxChange = (e) => {
-    const { name,id, checked } = e.target;
-    console.log(name)
+    const {id, checked } = e.target;
+   
     setCheckboxStates((prevStates) => ({...prevStates,[id]:checked}));
+  
   };
   return (
     <div className="App" style={{height:"100vh" }}>
@@ -46,7 +48,7 @@ function App() {
       <div style={{marginLeft:"10%"}}>
          <div style={{display:"flex",justifyContent:"space-between",marginTop:"20px",marginBottom:"25px"}}>
           <span style={{color:"#F3F4FB",fontFamily:"Montserrat,sans-serif"}}>SÜREÇLER</span> 
-          <Checkbox style={{ color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",position:"relative",right:"35px" }} checked={checkAll} indeterminate={indeterminate} onChange={handleSelectAll}>Tümünü Seç</Checkbox>
+          <Checkbox style={{ color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",position:"relative",right:"35px" }} checked={checkAll}  onChange={handleSelectAll}>Tümünü Seç</Checkbox>
           </div>
 
        <Space style={{marginLeft:"2%"}} direction="vertical">
