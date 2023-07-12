@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import {Space, Checkbox} from "antd"
-import {logo} from "./image.js"
+import {logo} from "./assets/image"
+import Main from "./components/Main.js"
 
 function App() {
   const [checkAll,setCheckAll]=useState(false)
@@ -40,18 +41,18 @@ function App() {
   
   };
   return (
-    <div className="App" style={{height:"100vh" }}>
+    <div className="App" style={{height:"100vh", display:"flex"}}>
       
-      <div style={{display:"flex",flexDirection:"column", width:"25%" ,backgroundColor:"#273AB5",height:"100%",}}>
+      <div style={{display:"flex",flexDirection:"column", width:"25%",minWidth:"280px" ,maxWidth:"405px",backgroundColor:"#273AB5",height:"100%",}}>
       <img style={{width:"45%", margin:"0 auto",marginTop:"25px",marginBottom:"15px"}} src={`${logo}`} alt=""/>
-      
-      <div style={{marginLeft:"10%"}}>
-         <div style={{display:"flex",justifyContent:"space-between",marginTop:"20px",marginBottom:"25px"}}>
+      <div style={{display:"flex",justifyContent:"space-between",marginTop:"20px",marginBottom:"25px", marginLeft:"10%"}}>
           <span style={{color:"#F3F4FB",fontFamily:"Montserrat,sans-serif"}}>SÜREÇLER</span> 
           <Checkbox style={{ color: "#F3F4FB", fontFamily:"Montserrat,sans-serif",position:"relative",right:"35px" }} checked={checkAll}  onChange={handleSelectAll}>Tümünü Seç</Checkbox>
           </div>
+      <div style={{marginLeft:"10%",overflowY:"auto"}}>
+         
 
-       <Space style={{marginLeft:"2%"}} direction="vertical">
+       <Space style={{marginLeft:"2%",}} direction="vertical" >
        <Checkbox
         checked={checkboxStates.Arge}
         onChange={handleCheckboxChange}
@@ -163,6 +164,9 @@ function App() {
       </Checkbox>
         </Space>
       </div>
+      </div>
+      <div style={{display:"flex",height:"100%", overflowY:"auto"}}>
+      <Main/>
       </div>
     </div>
   );
